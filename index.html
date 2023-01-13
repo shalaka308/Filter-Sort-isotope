@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+        .grid {
+            display: flex;
+            gap: 10px;
+            /* justify-content: space-between;
+            margin: 15px; */
+
+        }
+
+        .element-item {
+            width: 100px;
+            height: 100px;
+            background-color: palevioletred;
+            color: #FFF;
+            text-align: center;
+            margin: 10px;
+        }
+
+        .filter_drpdwn {
+            display: none;
+            position: absolute;
+            top: 86px;
+            height: auto;
+            text-align: left;
+            background-color: #FFF;
+            max-width: 400px;
+            width: 100%;
+            z-index: 11;
+            padding: 20px 0px 20px 0px;
+            box-shadow: 0px 4px 16px rgba(32, 106, 93, 0.4);
+            border-bottom: 1px solid color(primary, base);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-4 ">
+                <div class="offet-type">
+                    <input data-tag="Online Store" class="filter-checkbx" type="checkbox" id="online" value="online">
+                    <label>Online</label><br>
+                    <input data-tag="In Store" class="filter-checkbx" type="checkbox" id="in_store" value="in_store">
+                    <label>In-store</label><br>
+
+                </div>
+
+                <hr>
+                <div class="category">
+                    <input data-tag="Travel" class="filter-checkbx" type="checkbox" id="travel" value="travel">
+                    <label>Travel</label><br>
+                    <input data-tag="Electronic" class="filter-checkbx" type="checkbox" id="electronic"
+                        value="electronic">
+                    <label>Electronic</label><br>
+                    <input data-tag="Dining" class="filter-checkbx" type="checkbox" id="dining" value="dining">
+                    <label>Dining</label><br><br>
+                </div>
+
+                <hr>
+                <div class="form-outline w-auto">
+                    <p><input type="text" id="quicksearch" placeholder="Search" /></p>
+                </div>
+                <div class="brands" id="brands">
+
+                    <div class="wrap-brands">
+                        <input data-tag="MMT" class="filter-checkbx" type="checkbox" id="mmt" value="mmt">
+                        <label>MMT</label><br>
+                    </div>
+                    <div class="wrap-brands">
+                        <input data-tag="Zoomcar" class="filter-checkbx" type="checkbox" id="zoomcar" value="zoomcar">
+                        <label>Zoomcar</label><br>
+                    </div>
+                    <div class="wrap-brands">
+                        <input data-tag="Yatra" class="filter-checkbx" type="checkbox" id="yatra" value="yatra">
+                        <label>Yatra</label><br>
+                    </div>
+                    <div class="wrap-brands">
+                        <input data-tag="Goibibo" class="filter-checkbx" type="checkbox" id="goibibo" value="goibibo">
+                        <label>Goibibo</label><br>
+                    </div>
+                    <div class="wrap-brands">
+                        <input data-tag="Eva" class="filter-checkbx" type="checkbox" id="eva" value="eva">
+                        <label>Eva</label><br>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="products" id="products">
+
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Credit Cards
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="wrap-brands">
+                                        <input data-tag="FinBooster" class="filter-checkbx" type="checkbox"
+                                            id="finbooster" value="finbooster">
+                                        <label>FinBooster</label><br>
+                                    </div>
+                                    <div class="wrap-brands">
+                                        <input data-tag="Wellness" class="filter-checkbx" type="checkbox" id="wellness"
+                                            value="wellness">
+                                        <label>Wellness</label><br>
+                                    </div>
+                                    <div class="wrap-brands">
+                                        <input data-tag="YES Prosperity Edge" class="filter-checkbx" type="checkbox"
+                                            id="yp_edge" value="yp_edge">
+                                        <label>YES Prosperity Edge</label><br>
+                                    </div>
+                                    <div class="wrap-brands">
+                                        <input data-tag="YES Prosperity Rewards" class="filter-checkbx" type="checkbox"
+                                            id="yp_rewards" value="yp_rewards">
+                                        <label>YES Prosperity Rewards</label><br>
+                                    </div>
+                                    <div class="wrap-brands">
+                                        <input data-tag="YES Prosperity Cashback" class="filter-checkbx" type="checkbox"
+                                            id="yp_cashback" value="yp_cashback">
+                                        <label>YES Prosperity Cashback</label><br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Debit Cards
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="wrap-brands">
+                                        <input data-tag="Internet Banking" class="filter-checkbx" type="checkbox"
+                                            id="internet_bank" value="internet_bank">
+                                        <label>Internet Banking</label><br>
+                                    </div>
+                                    <div class="wrap-brands">
+                                        <input data-tag="UPI" class="filter-checkbx" type="checkbox" id="upi"
+                                            value="upi">
+                                        <label>UPI</label><br>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+            <div class="col-4">
+                <div id="filter-listing">
+                    <input id="filter_field" type="text" value="All" readonly><span class="dropdwn">></span>
+                    <div class="filter_drpdwn">
+                        <ul>
+                            <li id="a_z">
+                                A - Z
+                            </li>
+                            <li id="z_a">
+                                Z - A
+                            </li>
+                            <li id="popularity">
+                                Popularity
+                            </li>
+                            <li id="ending_soon">
+                                Ending soon
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tag-name">
+
+                </div>
+                <button id="reset_grid" style="display: none">reset</button>
+
+                <div class="grid">
+
+                    <div class="element-item online travel dining mmt wellness upi">
+                        <p class="name">MMT</p>
+                        <p class="date">10/09/2015</p>
+
+                    </div>
+                    <div class="element-item in_store travel zoomcar yp_cashback upi">
+                        <p class="name">Zoomcar</p>
+                        <p class="date">11/08/2014</p>
+
+                    </div>
+                    <div class="element-item online dining goibibo yp_edge upi">
+                        <p class="name">Goibibo</p>
+                        <p class="date">12/07/2015</p>
+
+                    </div>
+                    <div class="element-item online travel mmt wellness internet_bank">
+                        <p class="name">MMT</p>
+                        <p class="date">11/09/2014</p>
+                    </div>
+                    <div class="element-item online travel mmt wellness internet_bank">
+                        <p class="name">MMT</p>
+                        <p class="date">11/10/2014</p>
+                    </div>
+                    <div class="element-item online dining goibibo yp_edge upi">
+                        <p class="name">Goibibo</p>
+                        <p class="date">12/12/2015</p>
+                    </div>
+                    <div class="element-item in_store travel electronic zoomcar yp_rewards upi">
+                        <p class="name">Zoomcar</p>
+                        <p class="date">10/08/2011</p>
+                    </div>
+                    <div class="element-item in_store travel yatra finbooster upi">
+                        <p class="name">yatra</p>
+                        <p class="date">11/08/2011</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>
